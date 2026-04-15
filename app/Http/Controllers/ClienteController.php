@@ -12,7 +12,10 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        //
+        
+    $clientes = Cliente::all(); 
+    return redirect()->route('clientes.index')->with('success', 'Cliente salvo!');
+    
     }
 
     /**
@@ -20,7 +23,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        //
+        return view('clientes.create');
     }
 
     /**

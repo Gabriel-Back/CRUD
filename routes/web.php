@@ -8,9 +8,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Rota para o CRUD de clientes
+// Rota para o CRUD de clientes
 Route::resource('clientes', ClienteController::class);
 
 // Rota para buscar CEP
 Route::get('api/cep/{cep}', [CepController::class, 'buscarCep']);
-
