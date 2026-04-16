@@ -7,8 +7,7 @@
 @section('body')
     
     <!-- Formulário para criar um novo cliente -->
-
-    <form action="{{ route('clientes.store') }}" method="POST">
+    <form action="{{ route('clientes.update') }}" method="POST"></form>
         @csrf
         <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>
@@ -72,7 +71,7 @@
                     })
                     .catch(() => alert('Erro ao buscar CEP.'));
             } else {
-                alert('CEP inválido. Digite apenas números.');
+                alert('CEP inválido.');
             }
         });
     </script>
